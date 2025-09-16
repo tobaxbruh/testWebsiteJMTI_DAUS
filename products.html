@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - GearUP Shop</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <canvas id="neural-bg"></canvas>
+    
+    <!-- Header -->
+    <header class="header-container">
+        <div class="logo-container">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gear Icon -->
+                <path d="M50 15a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 35a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M35 50a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M65 50a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 65a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 45a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                
+                <!-- Controller Icon -->
+                <path d="M75 25a15 15 0 1 1-30 0 15 15 0 0 1 30 0z" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                <circle cx="75" cy="25" r="5" fill="none" stroke="#ffff00" stroke-width="2"/>
+                <line x1="65" y1="25" x2="55" y2="25" stroke="#ffff00" stroke-width="2"/>
+                <circle cx="50" cy="25" r="3" fill="#ffff00"/>
+            </svg>
+            <span class="logo-text">GearUP Shop</span>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Produk</a></li>
+                <li><a href="why-us.html" class="nav-link">Kenapa Kami?</a></li>
+                <li><a href="contact.html" class="nav-link">Hubungi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin: 2rem 0;">PRODUK TERLARIS 2025</h2>
+        
+        <div class="products-grid">
+            <!-- Produk 1 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/gaming chair_result.png" alt="Gaming Chair">
+                <h3>Gaming Chair RGB</h3>
+                <p class="price">RM 499</p>
+                <button onclick="addToCart('Gaming Chair RGB', 499)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 2 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/GPU_result.png" alt="GPU">
+                <h3>GPU Gaming RTX 4070</h3>
+                <p class="price">RM 3,499</p>
+                <button onclick="addToCart('GPU Gaming RTX 4070', 3499)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 3 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/Headset 7.1 Surround_result.png" alt="Headset">
+                <h3>Headset 7.1 Surround</h3>
+                <p class="price">RM 299</p>
+                <button onclick="addToCart('Headset 7.1 Surround', 299)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 4 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/joystick wallpaper_result.png" alt="Joystick">
+                <h3>Joystick Racing Pro</h3>
+                <p class="price">RM 699</p>
+                <button onclick="addToCart('Joystick Racing Pro', 699)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 5 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/Keyboard Mekanikal Neon.jpg" alt="Keyboard">
+                <h3>Keyboard Mekanikal Neon</h3>
+                <p class="price">RM 299</p>
+                <button onclick="addToCart('Keyboard Mekanikal Neon', 299)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 6 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/Laptop gaming_result.png" alt="Laptop Gaming">
+                <h3>Laptop Gaming Ryzen 9</h3>
+                <p class="price">RM 6,999</p>
+                <button onclick="addToCart('Laptop Gaming Ryzen 9', 6999)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 7 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/monitor gaming_result.png" alt="Monitor">
+                <h3>Monitor Gaming 144Hz</h3>
+                <p class="price">RM 1,299</p>
+                <button onclick="addToCart('Monitor Gaming 144Hz', 1299)">Tambah ke Troli</button>
+            </div>
+            
+            <!-- Produk 8 -->
+            <div class="product-card glass-card">
+                <img src="Image Product/Mouse Gaming 24000 DPI_result.png" alt="Mouse">
+                <h3>Mouse Gaming 24000 DPI</h3>
+                <p class="price">RM 199</p>
+                <button onclick="addToCart('Mouse Gaming 24000 DPI', 199)">Tambah ke Troli</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 GearUP Shop - Aksesori Gaming Masa Depan</p>
+    </footer>
+
+    <!-- Ikon Troli - Letakkan sebelum </body> -->
+    <div class="cart-icon" onclick="viewCart()">
+      🛒 <span class="cart-count">0</span>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

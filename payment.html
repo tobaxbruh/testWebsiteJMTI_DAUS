@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - GearUP Shop</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <canvas id="neural-bg"></canvas>
+    
+    <!-- Header -->
+    <header class="header-container">
+        <div class="logo-container">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gear Icon -->
+                <path d="M50 15a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 35a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M35 50a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M65 50a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 65a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                <path d="M50 45a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0v-5a5 5 0 0 1 5-5z" fill="none" stroke="#00ffff" stroke-width="2"/>
+                
+                <!-- Controller Icon -->
+                <path d="M75 25a15 15 0 1 1-30 0 15 15 0 0 1 30 0z" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                <circle cx="75" cy="25" r="5" fill="none" stroke="#ffff00" stroke-width="2"/>
+                <line x1="65" y1="25" x2="55" y2="25" stroke="#ffff00" stroke-width="2"/>
+                <circle cx="50" cy="25" r="3" fill="#ffff00"/>
+            </svg>
+            <span class="logo-text">GearUP Shop</span>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Produk</a></li>
+                <li><a href="why-us.html" class="nav-link">Kenapa Kami?</a></li>
+                <li><a href="contact.html" class="nav-link">Hubungi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">PEMBAYARAN | PAYMENT</h2>
+        
+        <div class="payment-container">
+            <!-- Cart Summary (Left Side) -->
+            <div class="cart-summary glass-card">
+                <h3>Barang dalam Troli:</h3>
+                <ul id="cart-items">
+                    <!-- Item akan ditambah secara automatik oleh JavaScript -->
+                </ul>
+                <p id="total-price">Jumlah: RM 0</p>
+            </div>
+
+            <!-- Payment Form (Right Side) -->
+            <div class="payment-form glass-card">
+                <h3>Maklumat Pembayaran</h3>
+                <form onsubmit="return confirmPayment()">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nama Penuh" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Emel" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="No. Telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="address" placeholder="Alamat Penghantaran" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="cardName" placeholder="Nama pada Kad" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="cardNumber" placeholder="Nombor Kad Kredit/Debit" required pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" title="Format: 1111-2222-3333-4444">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="expDate" placeholder="Tarikh Luput (MM/YY)" required pattern="(0[1-9]\|1[0-2])\/?([0-9]{2})" title="Format: MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cvv" placeholder="CVV" required pattern="\d{3,4}" title="3 atau 4 digit di belakang kad">
+                        </div>
+                    </div>
+                    <button type="submit" class="neural-btn">SAHKAN PEMBAYARAN</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 GearUP Shop - Aksesori Gaming Masa Depan</p>
+    </footer>
+
+    <!-- Ikon Troli - Letakkan sebelum </body> -->
+    <div class="cart-icon" onclick="viewCart()">
+      🛒 <span class="cart-count">0</span>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
